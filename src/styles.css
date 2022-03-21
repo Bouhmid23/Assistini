@@ -15,3 +15,13 @@
 .Notoserif{
     font-family: Notoserif;
 }
+
+a .navbar-brand{
+    color: #030101;
+    display:inline-block;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  .navbar-brand{
+    font-family: Caveat;
+    font-size: xx-large; }
