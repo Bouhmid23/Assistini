@@ -12,12 +12,23 @@ html {
     margin: auto;
 
   }
+  .pswd{
+    font-size: small;
+    text-align: right;
+    margin: 5px 8px 10px 8px; 
+  }
   
   a {
     color: #92badd;
-    display:inline-block;
+    display:inline;
     text-decoration: none;
     font-weight: 400;
+  }
+  a.right{
+    text-align: end;
+  }
+  a.left{
+    text-align: start;
   }
   
   h2 {

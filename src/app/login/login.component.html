@@ -9,21 +9,21 @@
 
 <div class="wrapper fadeInDown">
   <div id="formContent">
-      <h1>Login</h1>
-    <!-- Tabs Titles -->
-
-  
-
+      <h1>Login</h1>  
     <!-- Login Form -->
     <form [formGroup]="form">
       <input type="text"  class="fadeIn second"  formControlName="utilisateur" placeholder="username">
       <input type="text"  class="fadeIn third" formControlName="mdp" placeholder="password">
+      <div class="pswd">
+        <a routerLink="pswd-oublie">Forgot Password  </a>
+      </div>
       <input type="submit" class="fadeIn fourth" value="Log In" (click)="Login()">
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+      
+      <a class="underlineHover left " routerLink="create-account">Create account</a>
     </div>
 
   </div>

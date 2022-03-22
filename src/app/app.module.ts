@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestPersoComponent } from './devloppeur/test-perso/test-perso.component';
 import { ProfileComponent } from './devloppeur/profile/profile.component';
+import { CreateAccountComponent } from './login/create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProfileComponent } from './devloppeur/profile/profile.component';
     AjoutCvComponent,
     EspaceRHComponent,
     TestPersoComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,

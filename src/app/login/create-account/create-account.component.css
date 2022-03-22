@@ -1,0 +1,46 @@
+body{
+    background-color: #1a0350;
+}
+
+.row{
+    display: contents;
+}
+.note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #c1d1f3);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+    font-family: Notoserif;
+    font-size: x-large;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #e5ddf5;
+    margin-bottom: 2%;
+    display: ruby-text;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+    margin: 20px 20px 100px 300px;
+}
+input[type=text]{
+    display: inline;
+    margin: 20px 20px 20px 20px ;
+}
+.container{
+    background-color: #ccdae9;
+}
