@@ -2,7 +2,7 @@
 /* BASIC */
 
 html {
-    background-color: #0b6c9c;
+    background-color: #f3f2f20e;
   }
   
   body {
@@ -19,7 +19,7 @@ html {
   }
   
   a {
-    color: #92badd;
+    color: #5d6c96;
     display:inline;
     text-decoration: none;
     font-weight: 400;
@@ -59,7 +59,7 @@ html {
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: rgb(255, 255, 255);
+    background: rgb(199, 238, 255);
     padding: 30px;
     width: 90%;
     max-width: 450px;
@@ -89,7 +89,7 @@ html {
   
   h2.active {
     color: #0d0d0d;
-    border-bottom: 2px solid #5fbae9;
+    border-bottom: 2px solid #20282c;
   }
   
   
@@ -275,3 +275,5 @@ html {
   #icon {
     width:60%;
   }
+
+  
