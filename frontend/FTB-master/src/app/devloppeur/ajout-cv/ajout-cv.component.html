@@ -1,0 +1,107 @@
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand"  href="#">Assistini</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="#">         </a></li>
+            <li><a href="#">          </a></li>
+            <li><a href="#">          </a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-out" routerLink=""></span> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <form [formGroup]="userForm" >
+    <section>
+        <div class="contact">
+            <h2>Informations de contact</h2>
+            <div class="contact-flex" >
+                <input type="text" placeholder="Nom" formControlName="name">
+            </div>
+            <div class="contact-flex">
+                <input type="text" placeholder="Adresse" formControlName="address">
+            </div>
+            <div class="contact-flex">
+                <input type="text" placeholder="Telephone" formControlName="number">
+            </div>
+            <div class="contact-flex">
+                <input type="text" placeholder="e-mail" formControlName="email">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contact" formArrayName="expProf">
+          <h2>Expériences professionnelles <button (click)="addExpProf()">+</button> </h2>
+          <div class="contact" *ngFor="let expProfForm of expProf.controls; let i = index">
+            <form [formGroupName]="i"  >
+            <div class="contact-flex" >
+                <input type="text" placeholder="Poste"formControlName="poste">
+            </div>
+            <div class="contact-flex">
+                <input type="text" placeholder="Societé" formControlName="societe">
+            </div>
+              <div class="contact-flex">
+                <input type="text" placeholder="description" formControlName="desc">
+              </div>
+            <div class="contact-flex">
+                <label>Date du début:</label> <input type="date" formControlName="date_deb"> <label>Date fin: </label><input type="date" formControlName="date_fin">
+            </div>
+
+            </form>
+          </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contact">
+            <h2>Formation <button (click)="onAddFormation()">+</button></h2>
+            <div class="contact-flex" >
+                <input type="text" placeholder="Ecole">
+            </div>
+            <div class="contact-flex">
+                <input type="text" placeholder="Diplome">
+            </div>
+            <div class="contact-flex">
+                <label>Date du début:</label> <input type="date"> <label>Date fin: </label><input type="date">
+            </div>
+            <div class="contact-flex">
+                <input type="text" placeholder="description">
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="contact">
+            <h2>Compétences</h2>
+            <div class="contact-flex">
+                <label>Professionnelle</label><input type="text"><button (click)="onAddCompetencePro()">+</button>
+            </div>
+            <div class="contact-flex">
+                <label>Personnelle</label><input type="text"><button (click)="onAddCompetence()">+</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+            <input class="submit" type="submit" value="Sauvegarder et passer le test psychologique" (click)="onTest()">
+    </section>
+
+      </form>
+</body>

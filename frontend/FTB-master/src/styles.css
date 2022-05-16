@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: Caveat;
+    src: url(assets/fonts/Caveat-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: Notoserif;
+    src: url(assets/fonts/NotoSerif-Regular.ttf)format('truetype');
+}
+
+.Caveat{
+    font-family: Caveat;
+}
+.Notoserif{
+    font-family: Notoserif;
+}

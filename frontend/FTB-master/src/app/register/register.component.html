@@ -1,0 +1,34 @@
+<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h1>Register</h1>
+    <!-- Tabs Titles -->
+
+
+
+    <!-- Login Form -->
+    <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
+      <input type="email"  class="fadeIn second"  formControlName="email" placeholder="Email">
+      <input type="text"  class="fadeIn second"  formControlName="username" placeholder="username">
+      <input type="password"  class="fadeIn third" formControlName="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Create account"  [disabled]="userForm.invalid">
+    </form>
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>
