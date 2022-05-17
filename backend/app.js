@@ -1,9 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/user');
+const cvCrudRoutes= require('./routes/cvCrud')
+
 const app = express();
 
-mongoose.connect('mongodb+srv://hatem:.....@cluster0.s44e3.mongodb.net/pfa?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://hatem:Lecole123@cluster0.s44e3.mongodb.net/pfa?retryWrites=true&w=majority',
     { useNewUrlParser: true,
         useUnifiedTopology: true })
     .then(() => console.log('Connexion à MongoDB réussie !'))
@@ -24,4 +26,5 @@ app.use((req, res, next) => {
 
 
 app.use('/api/auth', userRoutes);
+app.use('/api/cvCrud',cvCrudRoutes);
 module.exports = app;

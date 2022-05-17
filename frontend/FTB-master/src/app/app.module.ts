@@ -13,6 +13,7 @@ import {RegisterComponent} from "./register/register.component";
 import {UserService} from "./service/user.service";
 import {HttpClientModule} from "@angular/common/http";
 import {AuthService} from "./service/auth.service";
+import {CvService} from "./service/cv.service";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {AuthService} from "./service/auth.service";
   ],
   providers: [
     UserService,
-    AuthService
+    AuthService,
+    CvService
   ],
   bootstrap: [AppComponent]
 })

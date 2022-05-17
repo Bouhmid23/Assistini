@@ -26,7 +26,7 @@
         </div>
       </nav>
 
-    <form [formGroup]="userForm" >
+    <form [formGroup]="userForm"  >
     <section>
         <div class="contact">
             <h2>Informations de contact</h2>
@@ -49,7 +49,7 @@
         <div class="contact" formArrayName="expProf">
           <h2>Expériences professionnelles <button (click)="addExpProf()">+</button> </h2>
           <div class="contact" *ngFor="let expProfForm of expProf.controls; let i = index">
-            <form [formGroupName]="i"  >
+            <div [formGroupName]="i"  >
             <div class="contact-flex" >
                 <input type="text" placeholder="Poste"formControlName="poste">
             </div>
@@ -63,26 +63,32 @@
                 <label>Date du début:</label> <input type="date" formControlName="date_deb"> <label>Date fin: </label><input type="date" formControlName="date_fin">
             </div>
 
-            </form>
+            </div>
           </div>
         </div>
     </section>
 
     <section>
-        <div class="contact">
-            <h2>Formation <button (click)="onAddFormation()">+</button></h2>
+        <div class="contact" formArrayName="formation">
+            <h2>Formation <button (click)="addFormation()">+</button></h2>
+          <div class="contact" *ngFor="let formationForm of formation.controls; let i = index">
+            <div [formGroupName]="i"  >
             <div class="contact-flex" >
-                <input type="text" placeholder="Ecole">
+                <input type="text" placeholder="Ecole" formControlName="ecole">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="Diplome">
+                <input type="text" placeholder="Diplome" formControlName="diplome">
             </div>
+
+              <div class="contact-flex">
+                <input type="text" placeholder="description" formControlName="desc">
+              </div>
             <div class="contact-flex">
-                <label>Date du début:</label> <input type="date"> <label>Date fin: </label><input type="date">
+                <label>Date du début:</label> <input type="date" formControlName="date_deb"> <label>Date fin: </label><input type="date" formControlName="date_fin">
             </div>
-            <div class="contact-flex">
-                <input type="text" placeholder="description">
+
             </div>
+        </div>
         </div>
     </section>
 
@@ -90,17 +96,17 @@
     <section>
         <div class="contact">
             <h2>Compétences</h2>
-            <div class="contact-flex">
-                <label>Professionnelle</label><input type="text"><button (click)="onAddCompetencePro()">+</button>
+            <div class="contact-flex" formArrayName="compProf" *ngFor="let compProf of compProf.controls; let i = index">
+                <label>Professionnelle</label><input type="text" [formControlName]="i"><button (click)="addCompProf()" >+</button>
             </div>
-            <div class="contact-flex">
-                <label>Personnelle</label><input type="text"><button (click)="onAddCompetence()">+</button>
+            <div class="contact-flex"  formArrayName="compPers" *ngFor="let compPers of compPers.controls; let i = index">
+                <label>Personnelle</label><input type="text" [formControlName]="i"><button (click)="addCompPers()">+</button>
             </div>
         </div>
     </section>
 
     <section>
-            <input class="submit" type="submit" value="Sauvegarder et passer le test psychologique" (click)="onTest()">
+            <input class="submit" type="submit" (click)="onSubmitForm()" value="Sauvegarder et passer le test psychologique" >
     </section>
 
       </form>
