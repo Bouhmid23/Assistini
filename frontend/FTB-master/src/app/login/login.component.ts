@@ -48,14 +48,21 @@ export class LoginComponent implements OnInit {
       ( data) => {
         const obj =JSON.parse(JSON.stringify((data)))  ;
         const username = obj.username;
+        const userId= obj.userId;
 
         this.authService.signIn().then(
           () => {
             this.authService.username=username;
+            this.authService.userId=userId;
             this.authService.emituseridSubject();
+            this.authService.emituserIdSubject();
 
             console.log('Sign in successful!');
+
+            //if cv n'existe pas
             this.router.navigate(['ajout-cv']);
+
+            //else   this.router.navigate(['profile']);
           }
         );
 

@@ -1,0 +1,41 @@
+<div class="modal-content">
+  <div class="contact-flex" >
+    <h3>Titre</h3> <input type="text" placeholder="titre projet">
+  </div>
+  <br>
+  <div class="contact-flex">
+    <h3>Description</h3>    <input type="text" placeholder="description">
+  </div>
+  <br>
+  <div class="contact-flex">
+    <label>Date du début:</label> <input type="date"> <br> <br>
+    <label>Date fin: </label><input type="date">
+  </div>
+
+</div>
+<div class="contact">
+  <h2>Technologies </h2>
+  <!-- Using Items Input
+<ng-select
+[items]="technologies"
+bindLabel="name"
+placeholder=""
+appendTo="body"
+[multiple]="true"
+[(ngModel)]="selected1">
+</ng-select> -->
+
+
+</div>
+
+
+
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-danger" (click)="close()">
+    Cancel
+  </button>
+  <button type="button" class="btn btn-primary" (click)="confirm()">
+    OK
+  </button>
+</div>

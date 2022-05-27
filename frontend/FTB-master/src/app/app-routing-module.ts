@@ -5,11 +5,13 @@ import { TestPersoComponent } from "./devloppeur/test-perso/test-perso.component
 import { LoginComponent } from "./login/login.component";
 import { EspaceRHComponent } from "./RH/espace-rh/espace-rh.component";
 import {RegisterComponent} from "./register/register.component";
+import {ProfileComponent} from "./devloppeur/profile/profile.component";
 
 const routes:Routes=[
     {path:'ajout-cv', component: AjoutCvComponent},
     {path:'espace-rh', component: EspaceRHComponent},
-  {path:'register', component: RegisterComponent},
+     {path:'register', component: RegisterComponent},
+  {path:'profile', component: ProfileComponent},
     {path:'', component: LoginComponent},
     {path:'test-pers', component: TestPersoComponent}
 

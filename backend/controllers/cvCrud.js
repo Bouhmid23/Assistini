@@ -2,6 +2,7 @@ const Cv= require("../models/Cv")
 exports.addCv = (req, res, next) => {
 
             const cv = new Cv({
+                userId:req.body.userId,
                 name: req.body.newCv.name,
                 address: req.body.newCv.address,
                 number: req.body.newCv.number,

@@ -10,8 +10,8 @@ export class CvService {
 
   constructor(private http: HttpClient) { }
 
-  addCv(newCv: CvForm) {
-     return this.http.post(cvCrud_API + 'addCv', {newCv});
+  addCv(newCv: CvForm, userId: string | undefined) {
+     return this.http.post(cvCrud_API + 'addCv', {newCv,userId});
    }
 }
 

@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 
 const cvSchema = mongoose.Schema({
+    userId: { type: String, required: true },
     name: { type: String, required: true },
     address: { type: String, required: true },
     number: { type: String, required: true },

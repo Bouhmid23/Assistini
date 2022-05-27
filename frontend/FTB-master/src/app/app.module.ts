@@ -14,6 +14,10 @@ import {UserService} from "./service/user.service";
 import {HttpClientModule} from "@angular/common/http";
 import {AuthService} from "./service/auth.service";
 import {CvService} from "./service/cv.service";
+import { BasicComponent } from './basic/basic.component';
+import {NgSelectModule} from "@ng-select/ng-select";
+import {SimpleModalService} from "ngx-simple-modal";
+import { ProfileComponent } from './devloppeur/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +27,14 @@ import {CvService} from "./service/cv.service";
     AjoutCvComponent,
     EspaceRHComponent,
     TestPersoComponent,
-    RegisterComponent
+    RegisterComponent,
+    BasicComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-
+    NgSelectModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
@@ -37,7 +43,8 @@ import {CvService} from "./service/cv.service";
   providers: [
     UserService,
     AuthService,
-    CvService
+    CvService,
+    SimpleModalService
   ],
   bootstrap: [AppComponent]
 })

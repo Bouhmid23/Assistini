@@ -6,6 +6,8 @@ import {DateValidator} from "../../models/DateValidator";
 import {User} from "../../login/user";
 import {CvForm} from "./CvForm";
 import {CvService} from "../../service/cv.service";
+import {Subscription} from "rxjs";
+import {AuthService} from "../../service/auth.service";
 
 @Component({
   selector: 'app-ajout-cv',
@@ -16,11 +18,18 @@ export class AjoutCvComponent implements OnInit {
 
   // @ts-ignore
   userForm: FormGroup;
+  userName: string | undefined;
+  userNameSubscription: Subscription | undefined;
+
+  userId: string | undefined;
+
+  userIdSubscription: Subscription | undefined;
 
   constructor(private router:Router,
               private formBuilder: FormBuilder,
               private userService: UserService,
-              private cvService:CvService) { }
+              private cvService:CvService,
+              private authService:AuthService) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -28,7 +37,30 @@ export class AjoutCvComponent implements OnInit {
     this.addFormation();
     this.addCompPers();
     this.addCompProf();
+    this.userNameSubscription = this.authService.usernameSubject.subscribe(
+      (username: string) => {
+        this.userName = username;
+
+      }
+    );
+
+
+    this.userIdSubscription = this.authService.userIdSubject.subscribe(
+      (userId: string) => {
+        this.userId = userId;
+
+      }
+    );
+
+    this.authService.emituserIdSubject();
+    this.authService.emituseridSubject();
+    console.log(this.userName);
+    console.log(this.userId);
+
+
   }
+
+
 
   initForm() {
     this.userForm = this.formBuilder.group({
@@ -132,9 +164,10 @@ export class AjoutCvComponent implements OnInit {
       formValue['compProf'],
       formValue['compPers'],
     );
-    this.cvService.addCv(newCv).subscribe(
+    this.cvService.addCv(newCv,this.userId).subscribe(
       () => {
         console.log('Enregistrement terminé !');
+        this.router.navigate(['test-pers']);
 
 
       },
