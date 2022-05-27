@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-test-perso',
   templateUrl: './test-perso.component.html',
-  styleUrls: ['./test-perso.component.css']
+  styleUrls: ['./test-perso.component.scss']
 })
 export class TestPersoComponent implements OnInit {
   public d!:any;

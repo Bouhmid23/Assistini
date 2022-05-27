@@ -23,6 +23,7 @@ html {
     display:inline;
     text-decoration: none;
     font-weight: 400;
+
   }
   a.right{
     text-align: end;
@@ -40,6 +41,11 @@ html {
     margin: 40px 8px 10px 8px; 
     color: #cccccc;
   }
+  h1{
+    font-family: Notoserif;
+    margin: 5px 5px 50px 5px ;
+    font-size: xxx-large;
+  }
   
   
   
@@ -54,25 +60,26 @@ html {
     min-height: 100%;
     padding: 20px;
     margin-top: 100px;
+    box-shadow: #20282c;
   }
   
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: rgb(199, 238, 255);
+    background: rgb(255, 255, 255);
     padding: 30px;
     width: 90%;
     max-width: 450px;
     position: relative;
     padding: 0px;
-    -webkit-box-shadow: 0 30px 60px 0 rgba(154, 183, 226, 0.3);
+    -webkit-box-shadow: 30000px 30000px 30000px 6000px  rgba(11, 12, 12, 0.3);
     box-shadow: 0 30px 60px 0 rgba(65, 128, 211, 0.3);
     text-align: center;
   }
   
   #formFooter {
-    background-color: #f6f6f6;
-    border-top: 1px solid #dce8f1;
+    background-color: #f1f6ff;
+    border-top: 1px solid #64839b;
     padding: 25px;
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
@@ -130,7 +137,7 @@ html {
     transform: scale(0.95);
   }
   
-  input[type=text] {
+  input[type=text],input[type=password] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;

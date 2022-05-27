@@ -1,98 +1,109 @@
 
 <head>
-    
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 <body>
-
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand"  href="#">Assistini</a>
+    
+    
+    <nav class="navbar navbar-inverse nav">
+        <div class="">
+          <div class="">
+            <a class="navbar-brand">Assistini</a>
           </div>
-          <ul class="nav navbar-nav">
-            <li><a href="#">         </a></li>
-            <li><a href="#">          </a></li>
-            <li><a href="#">          </a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-out" routerLink=""></span> Logout</a></li>
-          </ul>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-outline-primary me-md-2 rounded" 
+          routerLink="">Logout</button> 
+        </div>
         </div>
       </nav>
-    
-    <section>        
+
+    <form class="submission-form shadow-lg p-3 mb-5 bg-body rounded">
+        <div class="card text-center shadow-lg p-3 mb-5 bg-body rounded">  
+           
         <div class="contact">
-            <h2>Informations de contact</h2>
-            <div class="contact-flex" >
-                <input type="text" placeholder="Nom">
+            <h2 class="titre">Informations de contact</h2>
+            <div class="" >
+                <input class="form-control" type="text" placeholder="Nom">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="Adresse">
+                <input class="form-control" type="text" placeholder="Adresse">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="Telephone">
+                <input class="form-control" type="text" placeholder="Telephone">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="e-mail">
+                <input class="form-control" type="text" placeholder="e-mail">
             </div>   
         </div>
-    </section>
+    
+    </div>
 
-    <section>
+    <div class="card card-body shadow-lg p-3 mb-5 bg-body rounded">
         <div class="contact">
-            <h2>Expériences professionnelles <button (click)="onAddExperience()">+</button> </h2>
+            <h2 class="titre">Expériences professionnelles  </h2>
             <div class="contact-flex" >
-                <input type="text" placeholder="Poste">
+                <input class="form-control" type="text" placeholder="Poste">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="Societé">
+                <input class="form-control" type="text" placeholder="Societé">
             </div>
             <div class="contact-flex">
-                <label>Date du début:</label> <input type="date"> <label>Date fin: </label><input type="date">
+                <label>Date du début:</label>
+                 <input class="form-control btn btn-primary btn-lg btn-block" type="date"> <label>Date fin: </label>
+                 <input class="form-control btn btn-primary btn-lg btn-block" type="date">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="description">
+                <textarea class="form-control" cols="30" rows="10" type="text" placeholder="description"></textarea>
             </div>
+            <button class="btn btn-primary btn-lg btn-block" (click)="onAddExperience()">Ajouter une expérience</button>
         </div>
-    </section>
+    </div>
 
-    <section>
+    <div class="card shadow-lg p-3 mb-5 bg-body rounded">
         <div class="contact">
-            <h2>Formation <button (click)="onAddFormation()">+</button></h2>
+            <h2>Formation </h2>
             <div class="contact-flex" >
-                <input type="text" placeholder="Ecole">
+                <input class="form-control" type="text" placeholder="Ecole">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="Diplome">
+                <input class="form-control" type="text" placeholder="Diplome">
             </div>
             <div class="contact-flex">
-                <label>Date du début:</label> <input type="date"> <label>Date fin: </label><input type="date">
+                <label>Date du début:</label> 
+                <input class="form-control btn btn-primary btn-lg btn-block" type="date"> <label>Date fin: </label>
+                <input class="form-control btn btn-primary btn-lg btn-block" type="date">
             </div>
             <div class="contact-flex">
-                <input type="text" placeholder="description">
+                <textarea class="form-control" cols="30" rows="10" type="text" placeholder="description"></textarea>
             </div>
+            <button class="btn btn-primary btn-lg btn-block" (click)="onAddFormation()">Ajouter une formation</button>
         </div>
-    </section>
+    </div>
     
     
-    <section>
+    <div class="card shadow-lg p-3 mb-5 bg-body rounded">
         <div class="contact">
-            <h2>Compétences</h2>
-            <div class="contact-flex">
-                <label>Professionnelle</label><input type="text"><button (click)="onAddCompetencePro()">+</button>
+            <h2 class="titre">Compétences</h2>
+            <div class="competence">
+                <label>Professionnelle</label><br><input class="form-control" type="text">
+                
             </div> 
-            <div class="contact-flex">    
-                <label>Personnelle</label><input type="text"><button (click)="onAddCompetence()">+</button>
+            <div class="competence">    
+                <label>Personnelle</label><br><input class="form-control" type="text">
+                
             </div>     
         </div>
-    </section>
+    </div>
     
-    <section>
-            <input class="submit" type="submit" value="Sauvegarder et passer le test psychologique" (click)="onTest()">
-    </section> 
+    <button class="btn btn-primary btn btn-primary btn-lg btn-block" 
+    type="submit" (click)="onTest()">Passer le test psychologique</button>
+</form>
 </body>

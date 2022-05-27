@@ -23,12 +23,12 @@ export class LoginComponent implements OnInit {
     });
   }
   Login():void{
-    if(this.form.get('utilisateur')?.value.indexOf('rh')>0  && this.form.get('mdp')?.value !==''){
-      this.router.navigateByUrl('espace-rh');
+    if(this.form.get('utilisateur')?.value.indexOf('rh')!==0  && this.form.get('mdp')?.value !==''){
+      this.router.navigateByUrl('rh/dashboard');
     }
     else{
-      if(this.form.get('utilisateur')?.value !=='' && this.form.get('mdp')?.value !=='')
-        this.router.navigateByUrl('ajout-cv');
+      
+        this.router.navigateByUrl('dev/ajout-cv');
     }
   }
 

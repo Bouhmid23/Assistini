@@ -1,0 +1,22 @@
+.container-fluid{
+    .card{
+        display: flex;
+    }
+    display: block;
+}
+span{
+    font-size: large;
+    text-align: center;
+}
+button{
+    background-color: rgba(255, 0, 0, 0.701);
+}
+a.active{
+   
+        background-color: rgba(0, 0, 255, 0.163);
+}
+div.card{
+    align-items: stretch;
+    align-content: space-around;
+   
+}
